@@ -1,0 +1,15 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "solution by javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "codewars",
+    "javascript"
+  ],
+  "author": "syaki",
+  "license": "GPL-3.0-or-later"
+}
