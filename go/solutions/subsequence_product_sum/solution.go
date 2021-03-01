@@ -1,5 +1,6 @@
 package solution
 
+// timed out
 func ProductSum(a []int, m int) int {
 	// your code here
 	var cache = make(map[int]map[int][]int)
@@ -33,4 +34,16 @@ func ProductSum(a []int, m int) int {
 		res += v
 	}
 	return res
+}
+
+func CleverProductSum(a []int, m int) int {
+	const D = 1e9 + 7
+	r := make([]int, m+1)
+	r[0] = 1
+	for i := 0; i < len(a); i++ {
+		for j := m; j > 0; j-- {
+			r[j] = (r[j] + r[j-1]*a[i]) % D
+		}
+	}
+	return r[m]
 }
